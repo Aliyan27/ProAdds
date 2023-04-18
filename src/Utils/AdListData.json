@@ -1,0 +1,54 @@
+[
+  {
+    "title": "Jomo Camp",
+    "starttime": "8 Apr 2023 12:07 AM",
+    "qrtext": "This message is from campaign. Please confirm delivery.",
+    "subscribers": 1,
+    "smssend": 1,
+    "unsubcount": 0,
+    "action": "",
+    "channel": "Resturant",
+    "categories": "Platinum",
+    "tenour": "Day",
+    "phonenumber": "03367728282"
+  },
+  {
+    "title": "Jomo Camp",
+    "starttime": "8 Mar 2023 12:07 AM",
+    "qrtext": "This message is from campaign. Please confirm delivery.",
+    "subscribers": 1,
+    "smssend": 1,
+    "unsubcount": 0,
+    "action": "",
+    "channel": "metro",
+    "categories": "Gold",
+    "tenour": "Day",
+    "phonenumber": "03367728282"
+  },
+  {
+    "title": "Jomo Camp",
+    "starttime": "8 Mar 2023 12:07 AM",
+    "qrtext": "This message is from campaign. Please confirm delivery.",
+    "subscribers": 1,
+    "smssend": 1,
+    "unsubcount": 0,
+    "action": "",
+    "channel": "metro",
+    "categories": "Gold",
+    "tenour": "Month",
+    "phonenumber": "03367728282"
+  },
+  {
+    "title": "Jomo Camp",
+    "starttime": "8 Mar 2023 12:07 AM",
+    "qrtext": "This message is from campaign. Please confirm delivery.",
+    "subscribers": 1,
+    "smssend": 1,
+    "unsubcount": 0,
+    "action": "",
+    "channel": "metro",
+    "categories": "Silver",
+    "tenour": "Month",
+    "phonenumber": "03367728282"
+  }
+]

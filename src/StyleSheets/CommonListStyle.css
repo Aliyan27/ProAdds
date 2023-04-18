@@ -1,0 +1,188 @@
+.Container {
+  width: 96%;
+  margin: 0 auto;
+  margin-bottom: 15px;
+
+  background: #fff;
+  border-radius: 20px;
+  padding: 25px;
+}
+.title-btn {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+  flex-wrap: wrap;
+}
+.title {
+  color: rgb(48, 78, 117);
+  font-weight: 600;
+  font-size: 20px;
+}
+.d-btn {
+  background: #384c5f;
+  border: none;
+  color: #fff;
+  padding: 10px 15px;
+  border-radius: 8px;
+  font-weight: 500;
+  font-size: 14px;
+  cursor: pointer;
+  transition: 0.2s;
+  display: inline-block;
+}
+.plus {
+  margin-right: 5px;
+  text-align: center;
+  display: inline-block;
+}
+.search {
+  display: flex;
+  flex-direction: row-reverse;
+}
+label {
+  display: inline-block;
+  margin-bottom: 0.5rem;
+}
+.search input {
+  border: 1px solid #eceaf3;
+  border-radius: 10px;
+  padding: 8px;
+  background-color: transparent;
+  margin-left: 3px;
+}
+.table table {
+  width: 100%;
+  margin: 0 auto;
+  clear: both;
+  border-collapse: separate;
+  border-spacing: 0;
+  border: 1px solid rgb(235, 235, 235);
+  width: 100%;
+  max-width: 100%;
+  background-color: transparent;
+  border-collapse: collapse;
+}
+.table thead {
+  color: rgb(103, 106, 108);
+  text-align: left;
+  line-height: 1.42857;
+
+  vertical-align: top;
+  background-color: #f3f6f9;
+}
+.table thead th {
+  padding: 8px;
+  cursor: pointer;
+  position: relative;
+  padding-right: 26px;
+}
+.table tbody tr td {
+  line-height: 1.42857;
+  vertical-align: top;
+  border: 1px solid rgb(231, 231, 231);
+  border-bottom: solid 2px rgba(70, 78, 95, 4%) !important;
+  border-top: none !important;
+  border-left: none !important;
+  border-right: none !important;
+  padding: 10px 8px !important;
+  color: #304e75 !important;
+  font-size: 13px;
+}
+.custom-select {
+  display: inline-block;
+  width: 100%;
+  height: calc(2.25rem + 2px);
+  padding: 0.375rem 1.75rem 0.375rem 0.75rem;
+  line-height: 1.5;
+  color: #495057;
+  vertical-align: middle;
+  background: #fff;
+  background-size: 8px 10px;
+  border: 1px solid #ced4da;
+  border-radius: 0.25rem;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
+.form-control {
+  background-color: rgb(255, 255, 255);
+  background-image: none;
+  border: 1px solid rgb(229, 230, 231);
+  border-radius: 1px;
+  color: inherit;
+  display: block;
+  padding: 6px 12px;
+  transition: border-color 0.15s ease-in-out 0s, box-shadow 0.15s ease-in-out 0s;
+  width: 147px;
+  font-size: 0.9rem;
+}
+.label {
+  padding: 8px;
+  display: block;
+  text-align: center;
+  font-weight: 600;
+  text-shadow: none;
+  border-radius: 0.25em;
+  line-height: 1;
+  white-space: nowrap;
+}
+.label-danger {
+  background-color: rgb(237, 85, 101);
+  color: rgb(255, 255, 255);
+}
+.table-striped tbody tr:nth-of-type(odd) {
+  background-color: rgba(247, 249, 251, 0.3);
+}
+.text-center {
+  text-align: center !important;
+}
+.dataTables_info {
+  color: #333;
+  padding-top: 0.755em;
+}
+.bottom-navbar span {
+  cursor: default;
+  border: 1px solid transparent;
+  box-shadow: none;
+  box-sizing: border-box;
+  display: inline-block;
+  min-width: 1.5em;
+  padding: 0.5em 1em;
+  margin-left: 2px;
+  text-align: center;
+  text-decoration: none !important;
+  cursor: pointer;
+  color: #333;
+  border: 1px solid transparent;
+  border-radius: 2px;
+}
+.d-bottom {
+  display: flex;
+  justify-content: space-between;
+  text-align: center;
+}
+.current {
+  background-color: #2f4d74;
+  color: #fff !important;
+  border-radius: 5px;
+}
+.bottom-navbar {
+  display: flex;
+  text-align: center;
+  padding-top: 0.25em;
+}
+.table {
+  overflow-x: auto;
+}
+.Addbox .table {
+  max-height: 306px;
+  overflow-y: auto;
+}
+
+@media only screen and (max-width: 767px) {
+  .d-bottom {
+    flex-direction: column;
+    align-items: center;
+  }
+}

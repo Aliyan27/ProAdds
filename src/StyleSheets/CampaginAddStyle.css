@@ -1,0 +1,86 @@
+.campagin-add {
+  width: 100%;
+  min-height: 1px;
+  padding-right: 15px;
+  padding-left: 15px;
+}
+.campaginAddForm {
+  width: 40%;
+  margin: 50px auto;
+  padding: 35px 20px;
+  background-color: #fff;
+  clear: both;
+  margin-bottom: 15px;
+  margin-top: 0px;
+  background: #fff;
+  border-radius: 20px;
+}
+.campaginAddView {
+  width: 100%;
+  min-height: 1px;
+  padding-right: 15px;
+  padding-left: 15px;
+}
+.campaginAddView .campaginAddTitle {
+  color: rgb(48, 78, 117);
+  font-weight: 600;
+  font-size: 20px;
+  margin-bottom: 15px;
+}
+.campaginAddLable {
+  display: inline-block;
+  margin-bottom: 0.5rem;
+  font-size: 13px;
+  font-weight: 400;
+  line-height: 1.5;
+  color: #212529;
+  text-align: left;
+}
+.campaginAddView Form {
+  display: flex;
+  flex-direction: column;
+  align-items: left;
+}
+.campaginAddView Form .form-control {
+  border: 1px solid #eceaf3;
+  border-radius: 10px;
+  padding: 8px;
+  background-color: rgb(255, 255, 255);
+  background-image: none;
+  transition: border-color 0.15s ease-in-out 0s, box-shadow 0.15s ease-in-out 0s;
+  width: 100%;
+  color: inherit;
+  display: block;
+  font-size: 0.9rem;
+  margin-bottom: 1rem;
+}
+.campaginAddView Form .btn {
+  background: #384c5f;
+  border: none;
+  color: #fff;
+  padding: 15px;
+  border-radius: 8px;
+  font-weight: 500;
+  font-size: 15px;
+  margin-top: 10px;
+  cursor: pointer;
+  transition: 0.2s;
+  text-transform: uppercase;
+  width: 100%;
+}
+.campaginAddView .error {
+  font-size: 12px;
+  color: red;
+  margin-bottom: 10px;
+}
+@media (max-width: 997px) {
+  .campaginAddForm {
+    width: 60%;
+  }
+}
+
+@media (max-width: 767px) {
+  .campaginAddForm {
+    width: 90%;
+  }
+}

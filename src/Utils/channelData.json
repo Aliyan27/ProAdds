@@ -1,0 +1,23 @@
+[
+    {
+      "channelname": "Metro",
+      "status": "Active",
+      "channelarea":["lahore","Commeti Chok","Saddar"]
+    },
+    {
+      "channelname": "Cafe",
+      "status": "Active",
+      "channelarea":["OPTP","Pizza Hut","BurgerLab"]
+    },
+    {
+      "channelname": "Hotel",
+      "status": "InActive",
+      "channelarea":["Pearl Continental","lasania hotel","Monal"]
+    },
+    {
+      "channelname": "Metro",
+      "status": "Active",
+      "channelarea":["lahore","Commeti Chok","Saddar"]
+    }
+  ]
+  

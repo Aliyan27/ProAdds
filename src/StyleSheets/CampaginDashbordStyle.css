@@ -1,0 +1,545 @@
+.Dashboard-campagin {
+  padding: 20px 10px 40px;
+  background-color: #f7f9fb;
+}
+.calendarWrap {
+  display: inline-block;
+  position: relative;
+}
+.inputBox {
+  padding: 10px 25px;
+  padding-left: 40px;
+  border: none;
+  margin-left: 10px;
+  border-radius: 10px;
+  background: #f2f4f7;
+}
+.calendarWrap {
+  margin-bottom: 5px;
+}
+.datepicker {
+  top: 39px;
+  position: absolute;
+  left: -465px;
+  z-index: 1;
+}
+.rdrInputRanges {
+  display: none;
+}
+.rdrMonth {
+  padding: 0;
+}
+.rdrDateDisplay {
+  margin: 0;
+}
+.rdrDateDisplayItem + .rdrDateDisplayItem {
+  margin-left: 0;
+}
+.PieChartData {
+  top: 196px;
+  left: 16px;
+}
+.rdrDateDisplayItem input {
+  cursor: pointer;
+  line-height: 2.5em;
+  border: 0px;
+  background: transparent;
+  width: 100%;
+  color: #849095;
+  font-weight: 700;
+  font-size: 13px;
+}
+.rdrDateDisplayItem {
+  border-radius: none;
+  box-shadow: none;
+  border: none;
+}
+.rdrCalendarWrapper {
+  color: #000000;
+  max-width: 489px;
+  font-size: 12px;
+}
+.rdrMonthAndYearPickers select {
+  display: none;
+}
+.Dashboard-campagin .dashboard-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  margin-bottom: 20px;
+}
+.rdrMonthAndYearWrapper {
+  height: 0;
+  padding: 0;
+}
+.rdrStaticRange {
+  border-bottom: none;
+}
+.rdrDefinedRangesWrapper {
+  width: 161px;
+}
+.rdrDateRangePickerWrapper {
+  border-left: 1px solid #ddd;
+}
+.rdrMonthName {
+  text-align: center;
+}
+.Dashboard-campagin .title {
+  color: #304e75;
+  font-weight: 600;
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+.Dashboard-campagin p {
+  color: #304e75;
+}
+.left ul li span {
+  color: rgba(66, 74, 85, 50%);
+  background: #f2f4f7;
+  border: solid 1px #f2f4f7;
+  transition: 0.2s;
+  padding: 10px 25px;
+  border-radius: 10px;
+  cursor: pointer;
+}
+.left {
+  display: flex;
+  position: relative;
+  gap: 30px;
+  align-items: end;
+  flex-wrap: wrap;
+}
+.Dashboard-campagin .dashboard-header .left ul {
+  display: flex;
+  gap: 15px;
+  align-items: center;
+  flex-wrap: wrap;
+  margin-bottom: 15px;
+}
+.dashboard-header .left ul li input {
+  padding: 10px 25px;
+  padding-left: 40px;
+  border: none;
+  margin-left: 10px;
+  border-radius: 10px;
+  background: #f2f4f7;
+  color: rgba(66, 74, 85, 50%);
+}
+.recentcampagin-header .title {
+  font-weight: 600;
+  color: #304e75;
+  font-size: 15px;
+}
+.recentcampagin-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.recentcampagin-header .d-btn {
+  background: #384c5f;
+  border: none;
+  color: #fff;
+
+  font-weight: 500;
+  font-size: 14px;
+  cursor: pointer;
+  transition: 0.2s;
+  display: inline-block;
+  padding: 5px 13px;
+  border-radius: 5px;
+}
+.recentcampagin-header .plus {
+  background: #384c5f;
+  border: none;
+  color: #fff;
+  border-radius: 8px;
+  font-weight: 500;
+  font-size: 14px;
+  cursor: pointer;
+  transition: 0.2s;
+  display: inline-block;
+}
+.recentcampagin {
+  position: relative;
+  width: 100%;
+  min-height: 1px;
+  padding-right: 15px;
+  padding-left: 15px;
+  flex: 0 0 50%;
+  max-width: 50%;
+}
+.recentcampagin .ibox {
+  clear: both;
+  margin-bottom: 15px;
+  margin-top: 0px;
+  background: #fff;
+  border-radius: 20px;
+  padding: 25px;
+  position: relative;
+}
+.table {
+  width: 100%;
+  max-width: 100%;
+  margin-bottom: 1rem;
+  background-color: transparent;
+}
+.table table {
+  width: 100%;
+  margin: 0 auto;
+  clear: both;
+  border-collapse: separate;
+  border-spacing: 0;
+  border: 1px solid rgb(235, 235, 235);
+  width: 100%;
+  max-width: 100%;
+  background-color: transparent;
+  border-collapse: collapse;
+}
+.table thead {
+  color: rgb(103, 106, 108);
+  text-align: left;
+  line-height: 1.42857;
+
+  vertical-align: top;
+  background-color: #f3f6f9;
+}
+.table thead th {
+  padding: 8px;
+  cursor: pointer;
+  position: relative;
+  padding-right: 3px;
+  padding-left: 7px;
+  padding-top: 10px;
+}
+.table tbody tr td {
+  line-height: 1.42857;
+  vertical-align: top;
+  border: 1px solid rgb(231, 231, 231);
+  border-bottom: solid 2px rgba(70, 78, 95, 4%) !important;
+  border-top: none !important;
+  border-left: none !important;
+  border-right: none !important;
+  padding: 10px 8px !important;
+  color: #304e75 !important;
+  font-size: 13px;
+}
+.label {
+  padding: 8px;
+  display: block;
+  text-align: center;
+  font-weight: 600;
+  text-shadow: none;
+  border-radius: 0.25em;
+  line-height: 1;
+  white-space: nowrap;
+}
+.label-danger {
+  background-color: rgb(237, 85, 101);
+  color: rgb(255, 255, 255);
+}
+.View-more {
+  display: flex;
+  font-weight: 600;
+  justify-content: center;
+  color: #2f4d74;
+}
+.dashboardrow {
+  display: flex;
+  flex-wrap: wrap;
+  box-sizing: border-box;
+}
+.CampaignsOverview .ibox .title {
+  font-weight: 600;
+  color: #304e75;
+  font-size: 15px;
+}
+.CampaignsOverview .ibox {
+  clear: both;
+  margin-bottom: 15px;
+  margin-top: 0px;
+  background: #fff;
+  border-radius: 20px;
+  padding: 25px;
+  position: relative;
+}
+.CampaignsOverview {
+  position: relative;
+  width: 100%;
+  min-height: 1px;
+  padding-right: 15px;
+  padding-left: 15px;
+  flex: 0 0 50%;
+  max-width: 50%;
+}
+.chart {
+  width: "100%";
+  max-width: "500px";
+}
+.PieChartData {
+  position: absolute;
+  top: 271px;
+  left: 28px;
+  margin: 0 auto;
+}
+.PieChartData ul li {
+  line-height: 1.42857;
+  vertical-align: top;
+  color: #304e75 !important;
+  font-size: 13px;
+  display: flex;
+  margin-bottom: 5px;
+}
+.PieChartData ul li .pending {
+  background-color: #f8bf34;
+  padding: 2px 13px;
+  margin-right: 5px;
+}
+.PieChartData ul li .signed {
+  background-color: #304e75;
+  padding: 2px 13px;
+  margin-right: 5px;
+}
+.PieChartData ul li .conpleted {
+  background-color: #74ce73;
+  padding: 2px 13px;
+  margin-right: 5px;
+}
+.PieChartData ul li .paid {
+  background-color: #00ada3;
+  padding: 2px 13px;
+  margin-right: 5px;
+}
+.ResponsiveContainer {
+  width: "100%";
+  height: "400px";
+}
+.dashboardBottom {
+  display: flex;
+  flex-wrap: wrap;
+}
+.dashboardbtm {
+  min-height: 1px;
+  padding-right: 15px;
+  padding-left: 15px;
+  flex: 0 0 33.333333%;
+  max-width: 33.333333%;
+}
+.ibox {
+  clear: both;
+  margin-bottom: 15px;
+  margin-top: 0px;
+  background: #fff;
+  border-radius: 20px;
+  padding: 25px;
+  position: relative;
+}
+h5 {
+  font-weight: 600;
+  color: #464255;
+  font-size: 30px;
+}
+.dashboardimg {
+  position: absolute;
+
+  top: 8px;
+  right: 9px;
+}
+@media only screen and (max-width: 1440px) {
+  .Piechart {
+    padding: 116px;
+  }
+  .PieChartData {
+    top: 234px;
+    left: 18px;
+  }
+}
+@media only screen and (max-width: 1240px) {
+  .PieChartData {
+    left: 20px;
+    top: 359px;
+  }
+}
+@media only screen and (max-width: 1199px) {
+  .PieChartData {
+    top: 368px;
+  }
+  .datepicker {
+    top: 55px;
+    left: -250px;
+  }
+}
+@media only screen and (max-width: 1000px) {
+  .dashboardbtm {
+    position: relative;
+    width: 100%;
+    min-height: 1px;
+    padding-right: 15px;
+    padding-left: 15px;
+    flex: none;
+    max-width: none;
+  }
+  .left {
+    align-items: end;
+    flex-direction: column;
+    gap: 12px;
+  }
+  .PieChartData {
+    top: 196px;
+  }
+  .CampaignsOverview {
+    flex: none;
+    max-width: 100%;
+  }
+  .CampaignsOverview .ibox {
+    width: 100%;
+  }
+  .recentcampagin {
+    flex: none;
+    max-width: 100%;
+  }
+  .datepicker {
+    top: 46px;
+    left: -456px;
+  }
+}
+@media only screen and (max-width: 776px) {
+  .Dashboard-campagin .dashboard-header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .PieChartData ul {
+    display: flex;
+    gap: 5px;
+    flex-wrap: wrap;
+  }
+  .Dashboard-campagin .dashboard-header {
+    flex-wrap: wrap;
+  }
+  .left {
+    align-items: flex-start;
+  }
+  .PieChartData {
+    top: 430px;
+  }
+  .rdrDefinedRangesWrapper {
+    width: 100%;
+  }
+  .datepicker {
+    top: 41px;
+
+    left: -77px;
+  }
+  .rdrDateRangePickerWrapper {
+    display: flex;
+    flex-direction: column;
+  }
+}
+@media only screen and (max-width: 640px) {
+  .datepicker {
+    top: 41px;
+    position: absolute;
+    left: -62px;
+    z-index: 1;
+    width: 336px;
+  }
+  .datepicker {
+    left: 54px;
+  }
+}
+@media only screen and (max-width: 480px) {
+  .inputBox {
+    padding: 8px -11px;
+    padding-left: 0;
+    margin-left: 0;
+  }
+  .rdrMonths {
+    flex-wrap: wrap;
+  }
+  .rdrMonth {
+    width: 100%;
+  }
+  .Dashboard-campagin .dashboard-header {
+    flex-wrap: wrap;
+    gap: 15px;
+  }
+  .PieChartData ul li .conpleted {
+    padding: 1px 8px;
+  }
+  .PieChartData ul li .signed {
+    padding: 1px 8px;
+  }
+  .PieChartData ul li .pending {
+    padding: 1px 8px;
+  }
+  .PieChartData ul li .paid {
+    padding: 1px 8px;
+  }
+  .PieChartData {
+    top: 396px;
+    left: 11px;
+  }
+  .PieChartData ul {
+    display: flex;
+    gap: 5px;
+    flex-wrap: wrap;
+  }
+  .CampaignsOverview .ibox {
+    clear: both;
+    margin-bottom: 15px;
+    margin-top: 0px;
+    background: #fff;
+    border-radius: 20px;
+    padding: 5px;
+    position: relative;
+  }
+  .left ul li span {
+    padding: 4px 13px;
+  }
+  .dashboard-header .left ul li input {
+    padding: 8px 7px;
+    padding-left: 16px;
+  }
+  .recentcampagin .ibox {
+    margin-bottom: 9px;
+    padding: 10px;
+  }
+  .Dashboard-campagin .title {
+    margin-bottom: 0px;
+  }
+  .CampaignsOverview {
+    padding-right: 0px;
+    padding-left: 0px;
+  }
+  .recentcampagin {
+    padding-right: 0px;
+    padding-left: 0px;
+  }
+  .Dashboard-campagin {
+    background-color: #f7f9fb;
+  }
+  .datepicker {
+    left: -62px;
+  }
+}
+@media only screen and (max-width: 375px) {
+  .dashboard-header .left ul li input {
+    padding: 10px 25px;
+    margin: 0;
+  }
+  .datepicker {
+    left: 0;
+  }
+  .datepicker {
+    width: 320px;
+  }
+  .datepicker {
+    width: 235px;
+    left: -59px;
+  }
+  .PieChartData {
+    top: 377px;
+    left: 11px;
+  }
+}

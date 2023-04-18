@@ -1,0 +1,28 @@
+[
+    {
+      "deviceName": "Iphone tab 4",
+      "channelName":"Metro",
+      "channelArea":"Islamabad I8"
+    },
+    {
+        "deviceName": "Iphone tab 2",
+        "channelName":"Metro",
+        "channelArea":"Islamabad I8"
+    },
+    {
+        "deviceName": "Iphone tab 4",
+        "channelName":"Cafe",
+        "channelArea":"Islamabad G8"
+    },
+    {
+        "deviceName": "Iphone tab 4",
+        "channelName":"Cafe",
+        "channelArea":"Giga Mall"
+    },
+    {
+        "deviceName": "Iphone tab 4",
+        "channelName":"Hotel",
+        "channelArea":"Islamabad I8"
+    }
+      
+]

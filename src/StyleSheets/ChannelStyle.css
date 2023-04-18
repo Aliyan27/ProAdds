@@ -1,0 +1,9 @@
+.statusActionBtn{
+    background-color: #2f4d74;
+    color: white;
+    width: 18%;
+    padding: 3px;
+    margin-right: 10px;
+    cursor: pointer;
+    border-radius: 3px;
+}

@@ -1,0 +1,200 @@
+.Main-Dashboard {
+  padding: 20px 10px 40px;
+  background-color: #f7f9fb;
+}
+
+.Main-Dashboard-Header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  margin-bottom: 20px;
+}
+.Main-Dashboard-title {
+  font-weight: 600;
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+.Dashboard-default-color {
+  color: #304e75;
+}
+.Main-Dashboard-left ul li span {
+  color: rgba(66, 74, 85, 50%);
+  background: #f2f4f7;
+  border: solid 1px #f2f4f7;
+  transition: 0.2s;
+  padding: 10px 25px;
+  border-radius: 10px;
+  cursor: pointer;
+}
+.Main-Dashboard-left {
+  display: flex;
+  position: relative;
+  gap: 30px;
+  align-items: end;
+  flex-wrap: wrap;
+}
+.Main-Dashboard-left ul {
+  display: flex;
+  gap: 15px;
+  align-items: center;
+  flex-wrap: wrap;
+  margin-bottom: 15px;
+}
+.Main-Dashboard-left ul li input {
+  padding: 10px 25px;
+  padding-left: 40px;
+  border: none;
+  margin-left: 10px;
+  border-radius: 10px;
+  background: #f2f4f7;
+  color: rgba(66, 74, 85, 50%);
+}
+
+.Recent-Application-Top .title {
+  font-weight: 600;
+  color: #304e75;
+  font-size: 15px;
+}
+.Recent-Application-Top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.Recent-Application-Top .d-btn {
+  background: #384c5f;
+  border: none;
+  color: #fff;
+  font-weight: 500;
+  font-size: 14px;
+  cursor: pointer;
+  transition: 0.2s;
+  display: inline-block;
+  padding: 5px 13px;
+  border-radius: 5px;
+}
+.Recent-Application-Top .plus {
+  background: #384c5f;
+  border: none;
+  color: #fff;
+  border-radius: 8px;
+  font-weight: 500;
+  font-size: 14px;
+  cursor: pointer;
+  transition: 0.2s;
+  display: inline-block;
+}
+.Recent-Application {
+  position: relative;
+  width: 100%;
+  min-height: 1px;
+  padding-right: 15px;
+  padding-left: 15px;
+  flex: 0 0 50%;
+  max-width: 50%;
+}
+.Recent-Application .ibox {
+  clear: both;
+  margin-bottom: 15px;
+  margin-top: 0px;
+  background: #fff;
+  border-radius: 20px;
+  padding: 25px;
+  position: relative;
+}
+.pagination {
+  display: flex;
+  column-gap: 10px;
+  margin-bottom: 0;
+  align-items: center;
+}
+.pagination li a {
+  color: #333;
+  padding-top: 0.755em;
+}
+.pagination .active a {
+  cursor: default;
+  border: 1px solid transparent;
+  box-shadow: none;
+  box-sizing: border-box;
+  display: inline-block;
+  min-width: 1.5em;
+  padding: 0.5em 1em;
+  margin-left: 2px;
+  text-align: center;
+  text-decoration: none !important;
+  cursor: pointer;
+  color: #333;
+  border: 1px solid transparent;
+  border-radius: 2px;
+  background-color: #2f4d74;
+  color: #fff !important;
+  border-radius: 5px;
+}
+
+@media only screen and (max-width: 1000px) {
+  .Main-Dashboard-left {
+    align-items: end;
+    flex-direction: column;
+    gap: 12px;
+  }
+  .Recent-Application {
+    flex: none;
+    max-width: 100%;
+  }
+}
+@media only screen and (max-width: 776px) {
+  .Main-Dashboard-Header {
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .Main-Dashboard-left {
+    align-items: flex-start;
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  .Main-Dashboard-Header {
+    flex-wrap: wrap;
+    gap: 15px;
+  }
+  .CampaignsOverview .ibox {
+    clear: both;
+    margin-bottom: 15px;
+    margin-top: 0px;
+    background: #fff;
+    border-radius: 20px;
+    padding: 5px;
+    position: relative;
+  }
+  .Main-Dashboard ul li span {
+    padding: 4px 13px;
+  }
+  .Main-Dashboard-left ul li input {
+    padding: 8px 7px;
+    padding-left: 16px;
+  }
+  .Recent-Application .ibox {
+    margin-bottom: 9px;
+    padding: 10px;
+  }
+  .Main-Dashboard-title {
+    margin-bottom: 0px;
+  }
+  .CampaignsOverview {
+    padding-right: 0px;
+    padding-left: 0px;
+  }
+  .Recent-Application {
+    padding-right: 0px;
+    padding-left: 0px;
+  }
+}
+@media only screen and (max-width: 375px) {
+  .Main-Dashboard-left ul li input {
+    padding: 10px 25px;
+    margin: 0;
+  }
+}

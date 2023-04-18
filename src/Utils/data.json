@@ -1,0 +1,42 @@
+[
+  {
+    "title": "Jomo Camp",
+    "starttime": "8 Apr 2023 12:07 AM",
+    "SMStext": "This message is from campaign. Please confirm delivery.",
+    "subscribers": 1,
+    "smssend": 1,
+    "unsubcount": 0,
+    "action": "",
+    "status": "Stopped"
+  },
+  {
+    "title": "F8",
+    "starttime": "8 Mar 2023 12:07 AM",
+    "SMStext": "This message is from campaign. Please confirm delivery.",
+    "subscribers": 1,
+    "smssend": 1,
+    "unsubcount": 0,
+    "action": "",
+    "status": "Stopped"
+  },
+  {
+    "title": "Pindi",
+    "starttime": "8 Mar 2023 12:07 AM",
+    "SMStext": "This message is from campaign. Please confirm delivery.",
+    "subscribers": 1,
+    "smssend": 1,
+    "unsubcount": 0,
+    "action": "",
+    "status": "Stopped"
+  },
+  {
+    "title": "IG2",
+    "starttime": "8 Mar 2023 12:07 AM",
+    "SMStext": "This message is from campaign. Please confirm delivery.",
+    "subscribers": 1,
+    "smssend": 1,
+    "unsubcount": 0,
+    "action": "",
+    "status": "Stopped"
+  }
+]

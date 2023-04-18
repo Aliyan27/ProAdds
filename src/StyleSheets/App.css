@@ -1,0 +1,125 @@
+#components-layout-demo-custom-trigger .trigger {
+  padding: 0 24px;
+  font-size: 18px;
+  line-height: 64px;
+  cursor: pointer;
+  transition: color 0.3s;
+}
+
+#components-layout-demo-custom-trigger .trigger:hover {
+  color: #1890ff;
+}
+
+#components-layout-demo-custom-trigger .logo {
+  height: 32px;
+  margin: 16px;
+  background: rgba(255, 255, 255, 0.3);
+}
+
+.trigger {
+  background-color: #2f4d74;
+  padding: 13px 15px;
+  border-radius: 10px;
+  color: white;
+}
+.notification {
+  background-color: #f3f2f7;
+  padding: 11px 13px;
+  border-radius: 10px;
+  color: #2f4d74;
+  font-size: large;
+}
+
+.headerContainer {
+  display: flex;
+  justify-content: space-between;
+  padding: 4px;
+  align-items: center;
+}
+.header {
+  display: flex;
+  justify-content: space-between;
+}
+.header-icone {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  margin-right: 10px;
+}
+.header-user {
+  position: relative;
+}
+
+/* .siderContainer{
+    flex: 0 0 200px;
+    max-width: 200px !important;
+    min-width: 200px !important;
+    width: 200px;
+  }  */
+.logoContainer {
+  background-image: url("../Assets/header-profile.png");
+  display: flex;
+  justify-content: center;
+  padding-top: 30px;
+  padding-bottom: 30px;
+}
+.logo {
+  max-width: 70%;
+}
+
+.ant-menu-item-selected {
+  background-color: #293846 !important;
+}
+.anticon-bar-chart {
+  font-size: large !important;
+}
+.anticon-appstore {
+  font-size: large !important;
+}
+.ant-layout-footer {
+  padding: 18px 12px !important;
+  color: rgba(0, 0, 0, 0.88);
+  font-size: 14px;
+  background: #f5f5f5;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+  right: 28px;
+  top: 55px;
+  padding: 10px;
+}
+.header-user {
+  position: relative;
+}
+.dropdown-content .dropdown-content-list {
+  border-radius: 3px;
+  color: inherit;
+  line-height: 25px;
+  margin: 4px !important;
+  text-align: left;
+  font-weight: normal;
+  font-size: 13px !important;
+  display: block;
+  padding: 0px 20px !important;
+  color: #212529;
+  border-bottom: 1px solid #e9ecef;
+}
+
+.header-user:hover .dropdown-content {
+  display: block;
+}
+
+@media screen and (max-width: 767px) {
+  .trigger {
+    display: none;
+  }
+  .headerContainer {
+    justify-content: flex-end;
+  }
+}
