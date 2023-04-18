@@ -8,57 +8,39 @@ import "react-datepicker/dist/react-datepicker.css";
 interface FormValues {
   channelName: string;
   userName: string;
-  email: string;
   password: string;
 }
-type Props = {
-  createChannel: (
-    name: string,
-    username: string,
-    email: string,
-    password: string
-  ) => Promise<void>;
-};
+type Props = {};
 
 const ChannelCreate = (props: Props) => {
   const [formvalues, setFormValue] = useState<FormValues>({
     channelName: "",
     userName: "",
-    email: "",
     password: "",
   });
 
   const validate = Yup.object().shape({
     channelName: Yup.string().required("Please Enter Title"),
     userName: Yup.string().required("Please Enter User Name"),
-    password: Yup.string()
-      .matches(
+    password: Yup.string().matches(
         /^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[!@#\$%\^&\*])(?=.{8,})/,
         "Invalid password"
-      )
-      .required("Password Required"),
+      ).required("Password Required"),
   });
   const formik = useFormik({
     initialValues: {
       channelName: "",
       userName: "",
-      email: "",
       password: "",
     },
     validationSchema: validate,
     onSubmit: (values: FormValues) => {
+      console.log("==>",values);
       setFormValue({
         channelName: values.channelName,
         userName: values.userName,
-        email: values.email,
         password: values.password,
       });
-      props.createChannel(
-        values.channelName,
-        values.userName,
-        values.email,
-        values.password
-      );
     },
   });
 
@@ -78,7 +60,7 @@ const ChannelCreate = (props: Props) => {
                 value={formik.values.channelName}
               />
               {<p className="error">{formik.errors.channelName}</p>}
-              <label className="campaginAddLable">UserName</label>
+              <label className="campaginAddLable">User Name</label>
               <input
                 type="text"
                 name="userName"
@@ -87,14 +69,6 @@ const ChannelCreate = (props: Props) => {
                 value={formik.values.userName}
               />
               {<p className="error">{formik.errors.userName}</p>}
-              <label className="campaginAddLable">Email</label>
-              <input
-                type="text"
-                name="email"
-                className="form-control"
-                onChange={formik.handleChange}
-                value={formik.values.email}
-              />
 
               <label className="campaginAddLable">Password</label>
               <input

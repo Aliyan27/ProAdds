@@ -3,10 +3,14 @@ import React, { useState } from 'react'
 import "../StyleSheets/CampaginAddStyle.css";
 import * as Yup from "yup";
 import { useFormik } from "formik";
+import { decode as base64_decode } from "base-64";
 
 type Props = {
   handleFile: (e: any) => void;
+  handleTitle: (e: any) => void;
   imgData: any;
+  title:string;
+  imgVal:string
 }
 
 interface FormValues {
@@ -27,6 +31,7 @@ const BrandAdd = (props: Props) => {
     validationSchema: validate,
     onSubmit: (values: FormValues) => {
       console.log(values,props.imgData)
+      props.handleTitle(values.title)
       setFormValue({
         title: values.title
       });
@@ -54,8 +59,8 @@ const BrandAdd = (props: Props) => {
               <input
                 className="form-control"
                 type="file"
-                accept=".jpg, .jpeg, .png , .webp, .svg+xml"
-                value={props.imgData}
+                accept=".webp"
+                value={props.imgVal}
                 onChange={(e) => props.handleFile(e)}
               />
               {props.imgData?

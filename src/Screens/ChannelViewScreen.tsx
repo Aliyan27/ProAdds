@@ -1,45 +1,40 @@
 import React, { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
+import data from "../Utils/channelData.json";
 import ChannelView from "../Components/ChannelView";
-import ApiNames from "../Constants/ApiNames";
-import { fetchGetPWKey } from "../Utils/FetchApis";
 
-type Props = {
-  token: any;
-};
+function ChannelViewScreen() {
 
-function ChannelViewScreen(props: Props) {
   const [currentPage, setCurrentPage] = useState(0);
   const [searchQuery1, setSearchQuery1] = useState<string>("");
   const [searchQuery2, setSearchQuery2] = useState<string>("");
   const [filteredData, setFilteredData] = useState<any>([]);
-  const [channelData, setChannelData] = useState<any>([]);
 
-  const navigation = useNavigate();
-  useEffect(() => {
-    let id = localStorage.getItem("id");
-    let name = localStorage.getItem("username");
-    let email = localStorage.getItem("email");
-    if (id === null && name === null && email === null) {
-      navigation("/login");
-    }
-    channelDateRequest();
-  }, []);
   const search = (query1: string, query2: string) => {
-    const filtered = channelData?.filter(
-      (item: any) =>
+    const filtered = data.filter(
+      (item) =>
         item.channelname.toLowerCase().includes(query1.toLowerCase()) &&
         item.status.toLowerCase().includes(query2.toLowerCase())
     );
     setFilteredData(filtered);
   };
+  const navigation = useNavigate();
+  useEffect(() => {
+    let id= localStorage.getItem("id");
+    let name= localStorage.getItem("username");
+    let email= localStorage.getItem("email");
+    if(id===null && name===null && email===null){
+      navigation("/login")
+    }
+  }, [])
+  
 
   const handlePageChange = ({ selected }: { selected: number }) => {
     setCurrentPage(selected);
   };
   const pageSize = 3;
-  const pageCount = Math.ceil(channelData?.length / pageSize);
-  const displayedUsers = channelData?.slice(
+  const pageCount = Math.ceil(data.length / pageSize);
+  const displayedUsers = data.slice(
     currentPage * pageSize,
     (currentPage + 1) * pageSize
   );
@@ -57,27 +52,15 @@ function ChannelViewScreen(props: Props) {
     }
   };
   const handleAddClick = (index: number) => {
-    navigate("/channels/add", { state: index });
+    if (index === 0) {
+      navigate("/channels/add", { state: -1 });
+    } else {
+      navigate("/channels/add", { state: index });
+    }
   };
-  const handledetailClick = (id: number, name: any, status: any) => {
-    const channelAreaData = {
-      id: id,
-      name: name,
-      status: status,
-    };
-    navigate("/channels/detail", { state: channelAreaData });
+  const handledetailClick = (index: object) => {
+    navigate("/channels/detail", { state: index });
   };
-  const channelDateRequest = async () => {
-    try {
-      const result = await fetchGetPWKey(
-        ApiNames.channelView,
-        props.token.jwttoken
-      );
-      setChannelData(result.response);
-      console.log(result);
-    } catch (error) {}
-  };
-
   return (
     <>
       <ChannelView
@@ -95,7 +78,6 @@ function ChannelViewScreen(props: Props) {
         setSearchQuery1={setSearchQuery1}
         searchQuery2={searchQuery2}
         setSearchQuery2={setSearchQuery2}
-        channelData={channelData}
       />
     </>
   );

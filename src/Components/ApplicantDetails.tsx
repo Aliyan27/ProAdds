@@ -5,11 +5,12 @@ import * as Yup from "yup";
 import { useFormik } from "formik";
 type Props = {
   state: any;
-  areaData: any;
-};
+}
 function ApplicantDetails(props: Props) {
-  var date = new Date().toDateString();
-
+  var dataAtIndex = props.state
+  
+  var date=new Date().toDateString()
+  var areaArray= Object.values(dataAtIndex.channelarea)
   return (
     <>
       <div className="Dashboard-campagin">
@@ -27,16 +28,18 @@ function ApplicantDetails(props: Props) {
                     <tbody>
                       <tr>
                         <td> Name:</td>
-                        <td>{props.state.name}</td>
+                        <td>{dataAtIndex.channelname}</td>
                       </tr>
                       <tr>
                         <td>Status:</td>
-                        <td>{props.state.status}</td>
+                        <td>{dataAtIndex.status}</td>
                       </tr>
-
+                     
                       <tr>
                         <td> Date Added:</td>
-                        <td>{}</td>
+                        <td>
+                          {date}
+                        </td>
                       </tr>
                     </tbody>
                   </table>
@@ -50,13 +53,13 @@ function ApplicantDetails(props: Props) {
               <div className="table">
                 <table>
                   <tbody>
-                    {props.areaData?.map((data: any, e: any) => {
-                      return (
+                    {areaArray.map((e:any)=>{
+                      return(
                         <tr>
-                          <td>Area:{}</td>
+                          <td>Area:</td>
                           <td>{e}</td>
                         </tr>
-                      );
+                      )
                     })}
                   </tbody>
                 </table>

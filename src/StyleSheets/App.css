@@ -97,7 +97,7 @@
 .header-user {
   position: relative;
 }
-.dropdown-content .dropdown-content-list {
+.dropdown-content a {
   border-radius: 3px;
   color: inherit;
   line-height: 25px;
@@ -109,6 +109,7 @@
   padding: 0px 20px !important;
   color: #212529;
   border-bottom: 1px solid #e9ecef;
+
 }
 
 .header-user:hover .dropdown-content {
@@ -118,8 +119,5 @@
 @media screen and (max-width: 767px) {
   .trigger {
     display: none;
-  }
-  .headerContainer {
-    justify-content: flex-end;
   }
 }

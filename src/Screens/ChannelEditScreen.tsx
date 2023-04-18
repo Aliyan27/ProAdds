@@ -5,16 +5,19 @@ import { useLocation, useNavigate } from "react-router-dom";
 function ChannelEditScreen() {
   const navigation = useNavigate();
   useEffect(() => {
-    let id = localStorage.getItem("id");
-    let name = localStorage.getItem("username");
-    let email = localStorage.getItem("email");
-    if (id === null && name === null && email === null) {
-      navigation("/login");
+    let id= localStorage.getItem("id");
+    let name= localStorage.getItem("username");
+    let email= localStorage.getItem("email");
+    if(id===null && name===null && email===null){
+      navigation("/login")
     }
-  }, []);
-
+  }, [])
+  
   const { state } = useLocation();
-
+  
+    // console.log("State=>",state);
+ 
+  
   return (
     <>
       <ChannelEdit state={state} />

@@ -87,13 +87,6 @@ const App: React.FC = () => {
       console.log("Authentication failed: " + err);
     }
   };
-  const handleLogoutClick = () => {
-    localStorage.removeItem("username");
-    localStorage.removeItem("email");
-    localStorage.removeItem("_grecaptcha");
-    localStorage.removeItem("id");
-    navigation("");
-  };
 
   return (
     <div>
@@ -230,18 +223,8 @@ const App: React.FC = () => {
                     className="dropdown-content"
                     style={{ display: displayValue }}
                   >
-                    <Link
-                      to="/dashboardChangepassword"
-                      className="dropdown-content-list"
-                    >
-                      Change Password
-                    </Link>
-                    <span
-                      onClick={handleLogoutClick}
-                      className="dropdown-content-list"
-                    >
-                      Logout
-                    </span>
+                    <Link to="/dashboardChangepassword">Change Password</Link>
+                    <Link to="/login">Logout</Link>
                   </div>
                 </div>
               </div>
@@ -266,23 +249,20 @@ const App: React.FC = () => {
                 <Route path="/channels" element={<Outlet />}>
                   <Route
                     path="/channels/list"
-                    element={<ChannelViewScreen token={token} />}
+                    element={<ChannelViewScreen />}
                   />
                   <Route
                     path="/channels/create"
-                    element={<ChannelCreateScreen token={token} />}
+                    element={<ChannelCreateScreen />}
                   />
-                  <Route
-                    path="/channels/add"
-                    element={<ChannelAddScreen token={token} />}
-                  />
+                  <Route path="/channels/add" element={<ChannelAddScreen />} />
                   <Route
                     path="/channels/edit"
                     element={<ChannelEditScreen />}
                   />
                   <Route
                     path="/channels/detail"
-                    element={<AplicantDetailsScreen token={token} />}
+                    element={<AplicantDetailsScreen />}
                   />
                 </Route>
                 <Route path="/ad" element={<Outlet />}>
@@ -291,19 +271,14 @@ const App: React.FC = () => {
                 </Route>
                 <Route path="/brand" element={<Outlet />}>
                   <Route path="/brand/list" element={<BrandListScreen />} />
-                  <Route path="/brand/add" element={<BrandAddScreen />} />
+                  <Route path="/brand/add" element={<BrandAddScreen token={token} />} />
                 </Route>
                 <Route path="/device" element={<Outlet />}>
                   <Route path="/device/list" element={<DeviceListScreen />} />
                 </Route>
                 <Route
                   path="/dashboardChangepassword"
-                  element={
-                    <DashboardChangePasswordScreen
-                      token={token}
-                      handleLogoutClick={handleLogoutClick}
-                    />
-                  }
+                  element={<DashboardChangePasswordScreen token={token} />}
                 />
               </Routes>
             </div>

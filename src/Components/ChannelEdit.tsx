@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import data from "../Utils/channelData.json";
 import * as Yup from "yup";
 import { useFormik } from "formik";
 import { useNavigate } from "react-router-dom";
@@ -13,18 +14,18 @@ interface FormValues {
 }
 
 function ChannelEdit(props: Props) {
-  const [area, setaArea] = useState("");
+  const [area,setaArea]=useState('')
 
-  const handleOptionChange = (value: any) => {
-    setaArea(value);
-  };
-  const navigation = useNavigate();
+  const handleOptionChange=(value:any)=>{
+    setaArea(value)
+  }
+  const navigation = useNavigate()
   const [formvalue, setFormValue] = useState({
     channel: "",
   });
-  var dataAtIndex = props.state;
+    var dataAtIndex = props.state
 
-  console.log("===>", typeof dataAtIndex.channelarea);
+  console.log("===>",typeof dataAtIndex.channelarea);
   const validate = Yup.object({
     channel: Yup.string().required("Please Enter channel"),
     // channelarea: Yup.string().required("Please Enter Area"),
@@ -35,9 +36,9 @@ function ChannelEdit(props: Props) {
     },
     validationSchema: validate,
     onSubmit: (values: FormValues) => {
-      navigation("/channels/list");
+      navigation("/channels/list")
       setFormValue({
-        channel: values.channel,
+        channel: values.channel
       });
     },
   });
@@ -49,7 +50,7 @@ function ChannelEdit(props: Props) {
             <h2 className="campaginAddTitle">Edit Channel </h2>
             <form onSubmit={formik.handleSubmit}>
               <label className="campaginAddLable">Channel </label>
-
+             
               <input
                 type="text"
                 name="channel"
@@ -61,11 +62,11 @@ function ChannelEdit(props: Props) {
 
               <label className="campaginAddLable">Channel Area </label>
               <Select
-                // className="adOptionContainer"
-                options={dataAtIndex.channelarea}
-                onChange={handleOptionChange}
-                value={area}
-              />
+                    // className="adOptionContainer"
+                    options={dataAtIndex.channelarea}
+                    onChange={handleOptionChange}
+                    value={area}
+                  />
               {/* <input
                 type="text"
                 name="channelarea"
