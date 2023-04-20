@@ -5,6 +5,7 @@ import * as Yup from "yup";
 import { useFormik } from "formik";
 type Props = {
   state: any;
+  areaData:any
 }
 function ApplicantDetails(props: Props) {
   var dataAtIndex = props.state

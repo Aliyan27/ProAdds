@@ -175,6 +175,11 @@ label {
 .table {
   overflow-x: auto;
 }
+.Addbox .table {
+  max-height: 306px;
+  overflow-y: auto;
+}
+
 @media only screen and (max-width: 767px) {
   .d-bottom {
     flex-direction: column;

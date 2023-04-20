@@ -63,7 +63,7 @@ const BrandAdd = (props: Props) => {
                 value={props.imgVal}
                 onChange={(e) => props.handleFile(e)}
               />
-              {props.imgData?
+              {props.imgVal?
                 <button type="submit" className="btn">
                   SUBMIT
                 </button>:

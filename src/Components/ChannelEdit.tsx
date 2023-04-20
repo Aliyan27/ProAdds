@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-import data from "../Utils/channelData.json";
 import * as Yup from "yup";
 import { useFormik } from "formik";
 import { useNavigate } from "react-router-dom";
@@ -7,39 +6,29 @@ import Select from "react-select";
 
 type Props = {
   state: any;
+  handleEdit: (name:string,id:number) => void;
 };
 interface FormValues {
   channel: string;
-  // channelarea: string;
 }
 
 function ChannelEdit(props: Props) {
-  const [area,setaArea]=useState('')
 
-  const handleOptionChange=(value:any)=>{
-    setaArea(value)
-  }
-  const navigation = useNavigate()
-  const [formvalue, setFormValue] = useState({
-    channel: "",
-  });
-    var dataAtIndex = props.state
+  const navigation = useNavigate();
+ 
+  var dataAtIndex = props.state.data;
 
-  console.log("===>",typeof dataAtIndex.channelarea);
   const validate = Yup.object({
     channel: Yup.string().required("Please Enter channel"),
-    // channelarea: Yup.string().required("Please Enter Area"),
   });
   const formik = useFormik({
     initialValues: {
-      channel: dataAtIndex.channelname,
+      channel: dataAtIndex.name,
     },
     validationSchema: validate,
     onSubmit: (values: FormValues) => {
-      navigation("/channels/list")
-      setFormValue({
-        channel: values.channel
-      });
+      props.handleEdit(values.channel,dataAtIndex.id)
+    
     },
   });
   return (
@@ -50,7 +39,7 @@ function ChannelEdit(props: Props) {
             <h2 className="campaginAddTitle">Edit Channel </h2>
             <form onSubmit={formik.handleSubmit}>
               <label className="campaginAddLable">Channel </label>
-             
+
               <input
                 type="text"
                 name="channel"
@@ -59,22 +48,6 @@ function ChannelEdit(props: Props) {
                 value={formik.values.channel}
               />
               {<p className="error">{formik.errors.channel}</p>}
-
-              <label className="campaginAddLable">Channel Area </label>
-              <Select
-                    // className="adOptionContainer"
-                    options={dataAtIndex.channelarea}
-                    onChange={handleOptionChange}
-                    value={area}
-                  />
-              {/* <input
-                type="text"
-                name="channelarea"
-                className="form-control"
-                onChange={formik.handleChange}
-                value={formik.values.channelarea}
-              />
-              {<p className="error">{formik.errors.channelarea}</p>} */}
 
               <button type="submit" className="btn">
                 SUBMIT

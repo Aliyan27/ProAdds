@@ -87,6 +87,14 @@ const App: React.FC = () => {
       console.log("Authentication failed: " + err);
     }
   };
+  const handleLogoutClick = () => {
+    localStorage.removeItem("username");
+    localStorage.removeItem("email");
+    localStorage.removeItem("_grecaptcha");
+    localStorage.removeItem("id");
+    navigation("");
+  };
+
 
   return (
     <div>
@@ -249,20 +257,20 @@ const App: React.FC = () => {
                 <Route path="/channels" element={<Outlet />}>
                   <Route
                     path="/channels/list"
-                    element={<ChannelViewScreen />}
+                    element={<ChannelViewScreen token={token}/>}
                   />
                   <Route
                     path="/channels/create"
-                    element={<ChannelCreateScreen />}
+                    element={<ChannelCreateScreen token={token} />}
                   />
-                  <Route path="/channels/add" element={<ChannelAddScreen />} />
+                  <Route path="/channels/add" element={<ChannelAddScreen token={token} />} />
                   <Route
                     path="/channels/edit"
                     element={<ChannelEditScreen />}
                   />
                   <Route
                     path="/channels/detail"
-                    element={<AplicantDetailsScreen />}
+                    element={<AplicantDetailsScreen token={token} />}
                   />
                 </Route>
                 <Route path="/ad" element={<Outlet />}>
@@ -278,8 +286,13 @@ const App: React.FC = () => {
                 </Route>
                 <Route
                   path="/dashboardChangepassword"
-                  element={<DashboardChangePasswordScreen token={token} />}
-                />
+                  element={
+                    <DashboardChangePasswordScreen
+                      token={token}
+                      handleLogoutClick={handleLogoutClick}
+                    />}
+                  />
+
               </Routes>
             </div>
             <Footer style={{ backgroundColor: "white" }}>

@@ -5,6 +5,7 @@ import { fetchPosts } from "../Utils/FetchApis";
 
 type Props = {
   token: any;
+  handleLogoutClick: () => void;
 };
 interface FormValues {
   currentpassword: string;
@@ -32,8 +33,12 @@ const DashboardChangePasswordScreen = (props: Props) => {
         props.token.jwttoken
       );
       setResponse(result.response);
+      if (result.response === "Success") {
+        props.handleLogoutClick();
+      }
     } catch (error) {}
   };
+
 
   return (
     <DashboardChangePassword

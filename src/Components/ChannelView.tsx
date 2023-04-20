@@ -1,5 +1,5 @@
 import React from "react";
-import data from "../Utils/channelData.json";
+
 import "../StyleSheets/ChannelStyle.css";
 import { EyeFilled, PlusSquareFilled } from "@ant-design/icons";
 import ReactPaginate from "react-paginate";
@@ -7,7 +7,7 @@ type Props = {
   handleEditClick: (index: object) => void;
   handleViewClick: (index: number) => void;
   handleAddClick: (index: number) => void;
-  handledetailClick: (index: object) => void;
+  handledetailClick: (id: number, name: any, status: any) => void;
   displayedUsers: {
     channelname: string;
     status: string;
@@ -22,6 +22,7 @@ type Props = {
   setSearchQuery1: React.Dispatch<React.SetStateAction<string>>;
   searchQuery2: string;
   setSearchQuery2: React.Dispatch<React.SetStateAction<string>>;
+  channelData: any;
 };
 
 function ChannelView(props: Props) {
@@ -84,11 +85,18 @@ function ChannelView(props: Props) {
               </tr>
             </thead>
             <tbody>
-              {!props.searchQuery1
+              {/* {!props.searchQuery1
                 ? props.displayedUsers?.map((data: any, index: number) => (
                     <tr className="odd" key={index}>
-                      <td>{data.channelname}</td>
-                      <td className="text-center">{data.status}</td>
+                      <td>{data.name}</td>
+                      <td className="text-center">
+                        {" "}
+                        {data.status === true ? (
+                          <span className="statusActionBtn">Block</span>
+                        ) : (
+                          <span className="statusActionBtn">Unblock</span>
+                        )}
+                      </td>
                       <td
                         className="text-center"
                         style={{
@@ -97,18 +105,20 @@ function ChannelView(props: Props) {
                           alignItems: "center",
                         }}
                       >
-                        {data.status === "Active" ? (
-                          <span className="statusActionBtn">
-                            Block
-                          </span>
+                        {data.status === true ? (
+                          <span className="statusActionBtn">Block</span>
                         ) : (
-                          <span className="statusActionBtn">
-                            Unblock
-                          </span>
+                          <span className="statusActionBtn">Unblock</span>
                         )}
                         <EyeFilled
                           style={{ fontSize: "19px", marginRight: "10px" }}
-                          onClick={() => props.handledetailClick(data)}
+                          onClick={() =>
+                            props.handledetailClick(
+                              data.id,
+                              data.name,
+                              data.status
+                            )
+                          }
                         />
                         <PlusSquareFilled
                           style={{ fontSize: "18px" }}
@@ -117,10 +127,13 @@ function ChannelView(props: Props) {
                       </td>
                     </tr>
                   ))
-                : props.filteredData?.map((data: any, index: number) => (
+                : */}
+                {props.channelData?.map((data: any, index: number) => (
                     <tr className="odd" key={index}>
-                      <td>{data.channelname}</td>
-                      <td className="text-center">{data.status}</td>
+                      <td>{data.name}</td>
+                      {data.status?
+                      <td className="text-center">Active</td>:
+                      <td className="text-center">InActive</td>}
                       <td
                         className="text-center"
                         style={{
@@ -140,11 +153,17 @@ function ChannelView(props: Props) {
                         )}
                         <EyeFilled
                           style={{ fontSize: "19px", marginRight: "10px" }}
-                          onClick={() => props.handledetailClick(data)}
+                          onClick={() =>
+                            props.handledetailClick(
+                              data.id,
+                              data.channelname,
+                              data.status
+                            )
+                          }
                         />
                         <PlusSquareFilled
                           style={{ fontSize: "18px" }}
-                          onClick={() => props.handleAddClick(index)}
+                          onClick={() => props.handleAddClick(data.id)}
                         />
                       </td>
                     </tr>
@@ -152,9 +171,14 @@ function ChannelView(props: Props) {
             </tbody>
           </table>
         </div>
+        {props.channelData ? null : (
+          <h2 style={{ textAlign: "center" }}>No data Yet</h2>
+        )}
+
         <div className="d-bottom">
-          <div className="dataTables_info">
-            Showing 1 to {props.displayedUsers.length} of {data.length} entries
+          <div className="dataTables-info">
+            Showing 1 to {props.displayedUsers?.length} of
+            {props.channelData?.length} entries
           </div>
           <div className="bottom-navbar">
             <ReactPaginate
